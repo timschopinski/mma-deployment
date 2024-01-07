@@ -26,9 +26,14 @@ Print logs
 docker service logs <container_id>
 ```
 
-Build channel
+Build prestashop channel
 ```
 ssh -L localhost:8080:student-swarm01.maas:18874 rsww@172.20.83.101
+```
+
+Build mysql admin channel
+```
+ssh -L localhost:9099:student-swarm01.maas:18874 rsww@172.20.83.101
 ```
 
 Remove stack
