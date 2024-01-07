@@ -35,3 +35,12 @@ Remove stack
 ```
 docker stack rm BE_188749
 ```
+
+DB Connection
+
+psdata\app\config\parameters.php
+'database_host' => 'db',
+    'database_port' => '3306',
+    'database_name' => 'BE_188749',
+    'database_user' => 'root',
+    'database_password' => 'student',
