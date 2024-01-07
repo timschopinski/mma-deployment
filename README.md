@@ -1,1 +1,37 @@
 # deployment-commands
+
+Connect with ssh
+```
+ssh rsww@172.20.83.101
+ssh hdoop@student-swarm01.maas
+```
+
+Go to project
+```
+cd /opt/storage/actina15-20/block-storage/students/projects/students-swarm-services/BE_188749
+```
+
+Deploy
+```
+docker stack deploy -c docker-compose.yml BE_188749 --with-registry-auth
+```
+
+List services
+```
+docker service ls
+```
+
+Print logs
+```
+docker service logs <container_id>
+```
+
+Build channel
+```
+ssh -L localhost:8080:student-swarm01.maas:18874 rsww@172.20.83.101
+```
+
+Remove stack
+```
+docker stack rm BE_188749
+```
