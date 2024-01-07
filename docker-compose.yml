@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  prestashop:
+    image: timosch99/mmm:kelsz
+    container_name: prestashop
+    ports:
+      - "18874:80"
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 2
+        window: 60s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+    networks:
+      - admin-mysql_default
+networks:
+  admin-mysql_default:
+    external: true
