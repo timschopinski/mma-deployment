@@ -16,6 +16,11 @@ Deploy
 docker stack deploy -c docker-compose.yml BE_188749 --with-registry-auth
 ```
 
+Check deployement status
+```
+docker service ps BE_188749_prestashop
+```
+
 List services
 ```
 docker service ls
